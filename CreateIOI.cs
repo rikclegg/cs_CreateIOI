@@ -326,11 +326,13 @@ namespace com.bloomberg.emsx.samples
 
             // Create a quote consisting of a bid and an offer
             Element bid = ioi.GetElement("bid");
-            bid.GetElement("delta").SetValue(.0041);
-            bid.GetElement("size").GetElement("quantity").SetValue(1000);
-            bid.GetElement("referencePrice").SetElement("price", 202.15);
-            bid.GetElement("referencePrice").SetElement("currency", "GBp");
-            bid.SetElement("notes", "bid notes");
+            bid.GetElement("price").SetChoice("fixed");
+            bid.GetElement("price").GetElement("fixed").GetElement("price").SetValue(83.643);
+            bid.GetElement("size").SetChoice("quantity");
+            bid.GetElement("size").GetElement("quantity").SetValue(2000);
+            bid.GetElement("referencePrice").SetElement("price", 202.155);
+            bid.GetElement("referencePrice").SetElement("currency", "GBP");
+            bid.SetElement("notes", "offer notes");
 
             // Set the offer
             Element offer = ioi.GetElement("offer");
