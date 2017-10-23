@@ -31,7 +31,7 @@ using EventHandler = Bloomberglp.Blpapi.EventHandler;
 using Identity = Bloomberglp.Blpapi.Identity;
 using System;
 
-namespace com.bloomberg.emsx.samples
+namespace com.bloomberg.ioi.samples
 {
     public class CreateIOI    {
 
